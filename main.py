@@ -47,6 +47,7 @@ class Char:
             print(self.population, "This is pop")
 
         else:
+            self.population = times[-1][1] + (random.randint(-1, 1) / 10)
             pass
 
 
@@ -172,7 +173,6 @@ while True:
                     times.append((obj.STime, obj.population))
                     AIs.remove(obj)
 
-
             print(len(AIs))
             if len(AIs) < 1:
                 game = False
@@ -188,21 +188,12 @@ while True:
         for obj in AIs:
             times.append((obj.STime, obj.population))
         print(times)
+        print(times.sort())
 
     ranGen = 1
 
 
-    break
+
 
 pygame.QUIT()
 
-
-    # Skala ner värden till 0 - 1
-    # inputs: avstånd, hastighet
-    # Anpassa funktionen a * f(x - b) + C
-    # Vikter används för att förstärka eller försvaga connections låg vikt försvagar.
-    # VAD GÖR NEURONERNA???
-    # Sedan adderas alla värden på funktionerna ihop
-    #   w (a * f(x - b) + C)
-    #   w (a * f(x - b) + C)
-    # + w (a * f(x - b) + C)
